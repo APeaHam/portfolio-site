@@ -19,7 +19,7 @@ const Hero = () => {
             <div className='flex justify-between gap-x-8'>
                 {/* text */}
                 <div className='flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left'>
-                    <div className='text-sm uppercase front-semibold mb-4 text-primary tracking-[4px]'>
+                    <div className='text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]'>
                         Recent Graduate
                     </div>
                     <h1 className='h1 mb-4'>Hello, my name is Andy Pham</h1>
@@ -43,7 +43,8 @@ const Hero = () => {
                 </div>
                 {/* image */}
                 <div className='hidden xl:flex relative'>
-                    <Badge />
+                    {/* badge 1 */}
+                    <Badge containerStyles='absolute top-[24%] -left-[5rem]' icon={<RiBriefcase4Fill />} endCountNum={3} badgeText='Months Of Experience' />
                     <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] 
                     h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
                     <DevImg containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom' imgSrc='/hero/developer.png' />
