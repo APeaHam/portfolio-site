@@ -157,7 +157,7 @@ const About = () => {
                                         {/* languages */}
                                         <div className='flex flex-col gap-y-2'>
                                             <div className='text-primary'>Language Skill</div>
-                                            <div className='border-b border-border'></div>
+                                            <div className='border-b border-border dark:border-primary'></div>
                                             <div>English, Vietnamese</div>
                                         </div>
                                     </div>
@@ -183,7 +183,7 @@ const About = () => {
                                                         const { company, role, period } = item
                                                         return (
                                                             <div className='flex gap-x-8 group' key={index}>
-                                                                <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                                                                <div className='h-[84px] w-[1px] bg-border dark:bg-primary relative ml-2'>
                                                                     <div className='h-[11px] w-[11px] rounded-full bg-primary absolute
                                                                     -left-[5px] group-hover:translate-y-[84px] translate-all duration-500
                                                                     '></div>
@@ -218,7 +218,7 @@ const About = () => {
                                                         const { university, qualification, years, GPA } = item
                                                         return (
                                                             <div className='flex gap-x-8 group' key={index}>
-                                                                <div className='h-[100px] w-[1px] bg-border relative ml-2'>
+                                                                <div className='h-[100px] w-[1px] bg-border dark:bg-primary relative ml-2'>
                                                                     <div className='h-[11px] w-[11px] rounded-full bg-primary absolute
                                                                     -left-[5px] group-hover:translate-y-[100px] translate-all duration-500
                                                                     '></div>
@@ -256,7 +256,7 @@ const About = () => {
                                                     return (
                                                         <div className='mb-3' key={index}>
                                                             <h4 className='text-xl front-semibold mb-1'>{type}</h4>
-                                                            <div className='border-b border-border mb-2'></div>
+                                                            <div className='border-b border-border dark:border-primary mb-2'></div>
                                                             <div>
                                                                 <div className='text-center xl:text-left mx-auto xl:mx-0'>
                                                                     <div className='font-medium'>{list}</div>
@@ -269,7 +269,7 @@ const About = () => {
                                             )}
                                             <div className='mb-3'>
                                                 <h4 className='text-xl front-semibold mb-1'>Tools</h4>
-                                                <div className='border-b border-border mb-2'></div>
+                                                <div className='border-b border-border dark:border-primary mb-2'></div>
                                                 <div className='flex gap-x-8 justify-center xl:justify-start'>
                                                     {getData(skillData, 'tools').data.map(
                                                         (item, index) => {
