@@ -16,7 +16,7 @@ const infoData = [
     },
     {
         icon: <GraduationCap size={20} />,
-        text: 'Bachelor of Engineering (Honours) (Software)',
+        text: 'Bachelor of Software Engineering',
     },
     {
         icon: <HomeIcon size={20} />,
@@ -30,7 +30,7 @@ const qualificationData = [
         data: [
             {
                 university: 'Swinburne University of Technology',
-                qualification: 'Bachelor of Engineering (Honours) (Software)',
+                qualification: 'Bachelor of Software Engineering',
                 years: '2021-2024',
                 GPA: '3.38GPA',
             },
@@ -64,19 +64,19 @@ const skillData = [
         data: [
             {
                 type: 'Programming Languages',
-                name: 'Python, PHP, C#, C++, HTML/CSS, Java, VHDL, Kotlin, JavaScript, TypeScript, MATLAB'
+                list: 'Python, PHP, C#, C++, HTML/CSS, Java, VHDL, Kotlin, JavaScript, TypeScript, MATLAB'
             },
             {
                 type: 'FrameWorks',
-                name: '.NET, Laravel, Next.js, React, Spring'
+                list: '.NET, Laravel, Next.js, React, Spring'
             },
             {
                 type: 'Database',
-                name: 'SQL, MySQL, NoSQL'
+                list: 'SQL, MySQL, NoSQL'
             },
             {
                 type: 'Cloud Platforms',
-                name: 'AWS, Azure, Firebase'
+                list: 'AWS, Azure, Firebase'
             },
         ],
     },
@@ -163,7 +163,7 @@ const About = () => {
                                     </div>
                                 </TabsContent>
                                 <TabsContent value="qualifications">
-                                    <div>
+                                    <div className='text-center xl:text-left'>
                                         <h3 className='h3 mb-8 text-center xl:text-left'>
                                             My Journey
                                         </h3>
@@ -218,9 +218,9 @@ const About = () => {
                                                         const { university, qualification, years, GPA } = item
                                                         return (
                                                             <div className='flex gap-x-8 group' key={index}>
-                                                                <div className='h-[123px] w-[1px] bg-border relative ml-2'>
+                                                                <div className='h-[100px] w-[1px] bg-border relative ml-2'>
                                                                     <div className='h-[11px] w-[11px] rounded-full bg-primary absolute
-                                                                    -left-[5px] group-hover:translate-y-[123px] translate-all duration-500
+                                                                    -left-[5px] group-hover:translate-y-[100px] translate-all duration-500
                                                                     '></div>
                                                                 </div>
                                                                 <div>
@@ -243,7 +243,55 @@ const About = () => {
                                         </div>
                                     </div>
                                 </TabsContent>
-                                <TabsContent value="skills">skills info</TabsContent>
+                                {/* skills */}
+                                <TabsContent value="skills">
+                                    <div className='text-center xl:text-left'>
+                                        <h3 className='h3 mb-4 text-center xl:text-left'>
+                                            My Capabilities
+                                        </h3>
+                                        <div className='text-center xl:text-left'>
+                                            {getData(skillData, 'skills').data.map(
+                                                (item, index) => {
+                                                    const { type, list } = item;
+                                                    return (
+                                                        <div className='mb-3' key={index}>
+                                                            <h4 className='text-xl front-semibold mb-1'>{type}</h4>
+                                                            <div className='border-b border-border mb-2'></div>
+                                                            <div>
+                                                                <div className='text-center xl:text-left mx-auto xl:mx-0'>
+                                                                    <div className='font-medium'>{list}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    )
+                                                }
+                                            )}
+                                            <div className='mb-3'>
+                                                <h4 className='text-xl front-semibold mb-1'>Tools</h4>
+                                                <div className='border-b border-border mb-2'></div>
+                                                <div className='flex gap-x-8 justify-center xl:justify-start'>
+                                                    {getData(skillData, 'tools').data.map(
+                                                        (item, index) => {
+                                                            const { imgPath } = item;
+                                                            return (
+                                                                <div key={index}>
+                                                                    <Image
+                                                                        src={imgPath}
+                                                                        width={48}
+                                                                        height={48}
+                                                                        alt=''
+                                                                        priority
+                                                                    />
+                                                                </div>
+                                                            )
+                                                        }
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </TabsContent>
                             </div>
                         </Tabs>
                     </div>
