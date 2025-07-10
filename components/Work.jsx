@@ -15,24 +15,24 @@ const projectData = [
     {
         image: '/work/3.png',
         category: 'cat',
-        category: 'Project1',
-        Description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+        name: 'Project1',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
         link: '/',
         github: '/',
     },
     {
         image: '/work/2.png',
         category: 'cat',
-        category: 'Project2',
-        Description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+        name: 'Project2',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
         link: '/',
         github: '/',
     },
     {
         image: '/work/4.png',
         category: 'cat',
-        category: 'Project3',
-        Description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+        name: 'Project3',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
         link: '/',
         github: '/',
     },
@@ -55,11 +55,21 @@ export const Work = () => {
                     </Link>
                 </div>
                 {/* slider */}
-                <div>
-                    <Swiper>
+                <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+                    <Swiper className="h-[480px] "
+                        slidesPerView={1}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                            },
+                        }}
+                        spaceBetween={30}
+                        modules={Pagination}
+                        pagination={{ clickable: true }}
+                    >
                         {/* show only the first 4 projects for the slides */}
                         {
-                            projectData.slice(0.4).map((project, index) => {
+                            projectData.slice(0, 4).map((project, index) => {
                                 return (
                                     <SwiperSlide>
                                         <ProjectCard project={project} />
