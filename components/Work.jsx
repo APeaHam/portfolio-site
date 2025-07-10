@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-import Pagination from 'swiper/modules'
+import { Pagination } from 'swiper/modules'
 
 import { ProjectCard } from "@/components/ProjectCard"
 
@@ -64,14 +64,14 @@ export const Work = () => {
                             },
                         }}
                         spaceBetween={30}
-                        modules={Pagination}
-                        pagination={{ clickable: true }}
+                        modules={[Pagination]}
+                        pagination={{ clickable: true, type: "bullets" }}
                     >
                         {/* show only the first 4 projects for the slides */}
                         {
                             projectData.slice(0, 4).map((project, index) => {
                                 return (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={index}>
                                         <ProjectCard project={project} />
                                     </SwiperSlide>
                                 )
