@@ -6,6 +6,9 @@ import { Textarea } from "./ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 
 const ContactForm = () => {
+    function send() {
+
+    }
     return (
         <form action="" className="flex flex-col gap-y-4">
             {/* name */}
@@ -23,7 +26,7 @@ const ContactForm = () => {
                 <Textarea placeholder='Type Your Message Here.' />
                 <MessageSquare className="absolute top-4 right-6" size={20} />
             </div>
-            <Button className='flex items-center gap-x-1 max-w-[166px]'>
+            <Button className='flex items-center gap-x-1 max-w-[166px]' type='submit'>
                 Let's Talk
                 <ArrowRightIcon size={20} />
             </Button>
