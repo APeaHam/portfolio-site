@@ -29,17 +29,6 @@ export const contactEmail = ({
       <Preview>Thank you for the email</Preview>
       <Container style={container}>
         <Heading style={h1}>Thank you for the email {name}</Heading>
-        <Link
-          href="https://notion.so"
-          target="_blank"
-          style={{
-            ...link,
-            display: 'block',
-            marginBottom: '16px',
-          }}
-        >
-          Click here to log in with this magic link
-        </Link>
         <Text style={{ ...text, marginBottom: '16px' }}>
           I will be in touch 2-3 business days.
         </Text>
@@ -47,27 +36,19 @@ export const contactEmail = ({
           Message:
         </Text>
         <code  style={code}>{email}</code>
+        <Text style={{ ...text, marginTop: '14px' }}>
+          ~ Andy Pham 
+        </Text>
         <Img
           src={`${baseUrl}/static/logo(3).png`}
           width="32"
           height="32"
           alt="Andy Pham"
           style= {
-            {marginTop: '38px'}
+            {marginTop: '30px'}
           }
         />
-        <Text style={footer}>
-          <Link
-            href="https://notion.so"
-            target="_blank"
-            style={{ ...link, color: '#898989' }}
-          >
-            Notion.so
-          </Link>
-          , the all-in-one-workspace
-          <br />
-          for your notes, tasks, wikis, and databases.
-        </Text>
+        
       </Container>
     </Body>
   </Html>
