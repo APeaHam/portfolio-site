@@ -21,4 +21,4 @@ const useScrollProgress = () => {
     return completion;
 };
 
-export default useScrollProgress;
+export default useScrollProgress

@@ -12,7 +12,7 @@ import {
 import React from 'react';
 
 interface contactEmail {
-  email?: string;
+  msg?: string;
   name?: string;
 }
 
@@ -21,7 +21,7 @@ const baseUrl = process.env.VERCEL_URL
   : '';
 
 export const contactEmail = ({
-  email, name,
+  msg, name,
 }: contactEmail) => (
   <Html>
     <Head />
@@ -35,7 +35,7 @@ export const contactEmail = ({
         <Text style={{ ...text, marginBottom: '14px' }}>
           Message:
         </Text>
-        <code  style={code}>{email}</code>
+        <code  style={code}>{msg}</code>
         <Text style={{ ...text, marginTop: '14px' }}>
           ~ Andy Pham 
         </Text>
@@ -55,7 +55,7 @@ export const contactEmail = ({
 );
 
 contactEmail.PreviewProps = {
-  email: 'sparo-ndigo-amurt-secan',
+  msg: 'sparo-ndigo-amurt-secan',
   name: 'Andy Pham',
 } as contactEmail;
 

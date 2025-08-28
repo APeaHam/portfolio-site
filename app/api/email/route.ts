@@ -4,12 +4,17 @@ import contactEmail from '@/emails/contactEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST() {
-    resend.emails.send({
-        from: 'apham1303@gmail.com',
-        to: 'user@gmail.com',
+export async function POST(request: Request) {
+    const { name, msg, email } = await request.json();
+
+    await resend.emails.send({
+        from: 'andy-pham@apeaham.dev',
+        to: email,
         subject: 'hello world',
-        react: contactEmail(),
+        react: contactEmail({
+            name,
+            msg,
+        }),
     });
     return NextResponse.json({
         status: 'Ok'

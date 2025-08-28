@@ -6,24 +6,33 @@ import { Textarea } from "./ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 
 const ContactForm = () => {
-    function send() {
+    async function handleOnSubmit() {
 
+        const results = await fetch('/api/email', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: email.value,
+                name: name.value,
+                msg: msg.value,
+            })
+        }).then(r => r.json());
     }
+
     return (
-        <form action="" className="flex flex-col gap-y-4">
+        <form action={handleOnSubmit} className="flex flex-col gap-y-4">
             {/* name */}
             <div className="relative flex items-center">
-                <Input type='name' id='name' placeholder='Name' />
+                <Input type='name' id='name' name='name' placeholder='Name' />
                 <User className="absolute right-6" size={20} />
             </div>
             {/* Email */}
             <div className="relative flex items-center">
-                <Input type='email' id='email' placeholder='Email' />
+                <Input type='email' id='email' name='email' placeholder='Email' />
                 <MailIcon className="absolute right-6" size={20} />
             </div>
             {/* text */}
             <div className="relative flex items-center">
-                <Textarea placeholder='Type Your Message Here.' />
+                <Textarea id='msg' name='msg' placeholder='Type Your Message Here.' />
                 <MessageSquare className="absolute top-4 right-6" size={20} />
             </div>
             <Button className='flex items-center gap-x-1 max-w-[166px]' type='submit'>
