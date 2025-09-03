@@ -28,12 +28,12 @@ export const contactEmail = ({
     <Body style={main}>
       <Preview>Thank you for the email</Preview>
       <Container style={container}>
-        <Heading style={h1}>Thank you for the email {name}</Heading>
+        <Heading style={h1}>Thank you for the email {name}. 😊</Heading>
         <Text style={{ ...text, marginBottom: '16px' }}>
           I will be in touch 2-3 business days.
         </Text>
         <Text style={{ ...text, marginBottom: '14px' }}>
-          Message:
+          Your Message:
         </Text>
         <code  style={code}>{msg}</code>
         <Text style={{ ...text, marginTop: '14px' }}>
@@ -48,7 +48,6 @@ export const contactEmail = ({
             {marginTop: '30px'}
           }
         />
-        
       </Container>
     </Body>
   </Html>

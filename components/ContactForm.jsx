@@ -11,9 +11,9 @@ const ContactForm = () => {
         const results = await fetch('/api/email', {
             method: 'POST',
             body: JSON.stringify({
-                email: email.value,
-                name: name.value,
+                name: customerName.value,
                 msg: msg.value,
+                email: email.value,
             })
         }).then(r => r.json());
     }
@@ -22,7 +22,7 @@ const ContactForm = () => {
         <form action={handleOnSubmit} className="flex flex-col gap-y-4">
             {/* name */}
             <div className="relative flex items-center">
-                <Input type='name' id='name' name='name' placeholder='Name' />
+                <Input type='name' id='customerName' name='customerName' placeholder='Name' />
                 <User className="absolute right-6" size={20} />
             </div>
             {/* Email */}

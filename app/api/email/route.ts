@@ -10,7 +10,8 @@ export async function POST(request: Request) {
     await resend.emails.send({
         from: 'andy-pham@apeaham.dev',
         to: email,
-        subject: 'hello world',
+        cc: 'apham1303@gmail.com',
+        subject: 'Your email to Andy Pham',
         react: contactEmail({
             name,
             msg,
