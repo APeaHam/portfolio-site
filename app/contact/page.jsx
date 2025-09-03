@@ -14,7 +14,7 @@ const Contact = () => {
                         </div>
                         <h1 className="h1 max-w-md mb-8">Let's work Together</h1>
                         <p className="subtitle max-w-[400px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Feel free to leave a message for me below. I'll get back to you in 2-3 days.
                         </p>
                     </div>
                     {/* image */}
