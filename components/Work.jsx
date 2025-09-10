@@ -48,7 +48,7 @@ export const Work = () => {
                 flex flex-col justify-center items-center xl:items-start">
                     <h2 className="section-title mb-4">Latest Projects</h2>
                     <p className="subtitle mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        A list of some of my latest projects.<br />If you wish to see more go to my github.
                     </p>
                     <Link href='/projects'>
                         <Button> All projects</Button>
