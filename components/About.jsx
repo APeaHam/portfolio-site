@@ -139,9 +139,9 @@ const About = () => {
                                 {/* personal */}
                                 <TabsContent value="personal">
                                     <div className='text-center xl:text-left'>
-                                        <h3 className='h3 mb-4'>Expertise title</h3>
+                                        <h3 className='h3 mb-4'>Software Engineering Graduate Looking to Expand My Skill Set</h3>
                                         <p className='subtitle max-w-xl mx-auto xl:mx-0'>
-                                            description of my expertice
+                                            I specialise in developing web applications. I enjoy both front end and back end development. Although my experiences have aligned towards web-applications, I enjoy creating desktop applications aswell.
                                         </p>
                                         {/* icons */}
                                         <div className='grid xl:grid-cols-2 gap-4 mb-12'>
@@ -255,11 +255,11 @@ const About = () => {
                                                     const { type, list } = item;
                                                     return (
                                                         <div className='mb-3' key={index}>
-                                                            <h4 className='text-xl front-semibold mb-1'>{type}</h4>
+                                                            <h4 className='front-semibold mb-1 text-primary'>{type}</h4>
                                                             <div className='border-b border-border dark:border-primary mb-2'></div>
                                                             <div>
                                                                 <div className='text-center xl:text-left mx-auto xl:mx-0'>
-                                                                    <div className='font-medium'>{list}</div>
+                                                                    <div >{list}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -268,7 +268,7 @@ const About = () => {
                                                 }
                                             )}
                                             <div className='mb-3'>
-                                                <h4 className='text-xl front-semibold mb-1'>Tools</h4>
+                                                <h4 className='text-xl front-semibold mb-1 text-primary'>Tools</h4>
                                                 <div className='border-b border-border dark:border-primary mb-2'></div>
                                                 <div className='flex gap-x-8 justify-center xl:justify-start'>
                                                     {getData(skillData, 'tools').data.map(

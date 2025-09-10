@@ -7,6 +7,8 @@ import {
     RiTeamFill,
     RiTodoFill,
     RiArrowDownSLine,
+    RiGraduationCapFill,
+    RiBook2Fill,
 } from 'react-icons/ri'
 
 import DevImg from './DevImg'
@@ -24,7 +26,7 @@ const Hero = () => {
                     </div>
                     <h1 className='h1 mb-4'>Hello, my name is Andy Pham</h1>
                     <p className='subtitle max-w-[490px] mx-auto xl:mx-0'>
-                        aye thats me my knowledge and stuff my journey and my hobbies
+                        I'm a curious person always looking for new oportunities to learn new skills and hone my craft.
                     </p>
                     {/* buttons */}
                     <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
@@ -44,7 +46,21 @@ const Hero = () => {
                 {/* image */}
                 <div className='hidden xl:flex relative'>
                     {/* badge 1 */}
-                    <Badge containerStyles='absolute top-[24%] -left-[5rem]' icon={<RiBriefcase4Fill />} endCountNum={3} badgeText='Months Of Experience' />
+                    <Badge
+                        containerStyles='absolute top-[24%] -left-[5rem]'
+                        icon={<RiBriefcase4Fill />}
+                        endCountNum={3}
+                        badgeText='Months Of Experience'
+                    />
+                    {/* badge 2 */}
+                    <Badge
+                        containerStyles='absolute top-[55%] -right-8'
+                        icon={<RiBook2Fill />}
+                        endCountNum={3.37}
+                        endCountText={'.'}
+                        endCountDeci={38}
+                        badgeText='GPA'
+                    />
                     <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] 
                     h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
                     <DevImg containerStyles='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom' imgSrc='/hero/developer.png' />

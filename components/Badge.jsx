@@ -2,7 +2,7 @@
 
 import CountUp from 'react-countup'
 
-const Badge = ({ containerStyles, icon, endCountNum, endCountText, badgeText }) => {
+const Badge = ({ containerStyles, icon, endCountNum, endCountText, endCountDeci, badgeText }) => {
     return (
         <div className={`badge ${containerStyles}`}>
             <div className='text-3xl text-primary'>{icon}</div>
@@ -10,6 +10,7 @@ const Badge = ({ containerStyles, icon, endCountNum, endCountText, badgeText }) 
                 <div className='text-4xl leading-none font-bold text-primary'>
                     <CountUp end={endCountNum} delay={1} duration={4} />
                     {endCountText}
+                    <CountUp end={endCountDeci} delay={1} duration={4} />
                 </div>
                 <div className='max-w-[100px] leading-none text-[15px] font-medium text-black'>{badgeText}</div>
             </div>
