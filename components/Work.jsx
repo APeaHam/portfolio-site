@@ -13,28 +13,28 @@ import { ProjectCard } from "@/components/ProjectCard"
 
 const projectData = [
     {
-        image: '/work/3.png',
-        category: 'cat',
-        name: 'Project1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
-        link: '/',
-        github: '/',
-    },
-    {
         image: '/work/2.png',
-        category: 'cat',
-        name: 'Project2',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+        category: 'NEXT.JS',
+        name: 'A Tool for Property Investment',
+        description: "A web app that recommends a ranked list of suburbs with visualisation in which property investors should consider based on the information provided.",
         link: '/',
         github: '/',
     },
     {
         image: '/work/4.png',
-        category: 'cat',
-        name: 'Project3',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing',
+        category: 'Kotlin',
+        name: 'Android product management app',
+        description: 'A store management system for retail stores. The application contains CRUD functionality for products and can be accessed by multiple users.',
         link: '/',
-        github: '/',
+        github: 'https://github.com/APeaHam/product_management_app',
+    },
+    {
+        image: '/work/3.png',
+        category: '.NET',
+        name: 'ALDE',
+        description: 'A store management system for retail stores. The application contains CRUD functionality for Products, Customer and Staff accounts.',
+        link: 'ALDE (C# MVVM)',
+        github: 'https://github.com/APeaHam/ALDE',
     },
 ]
 
@@ -48,7 +48,7 @@ export const Work = () => {
                 flex flex-col justify-center items-center xl:items-start">
                     <h2 className="section-title mb-4">Latest Projects</h2>
                     <p className="subtitle mb-8">
-                        A list of some of my latest projects.<br />If you wish to see more go to my github.
+                        A list of some of my latest projects.<br />If you wish to see more go to my github.<br /> (images are placeholders.)
                     </p>
                     <Link href='/projects'>
                         <Button> All projects</Button>
@@ -56,7 +56,7 @@ export const Work = () => {
                 </div>
                 {/* slider */}
                 <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
-                    <Swiper className="h-[480px] "
+                    <Swiper className="h-[510px] "
                         slidesPerView={1}
                         breakpoints={{
                             640: {
